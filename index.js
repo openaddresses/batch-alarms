@@ -8,6 +8,7 @@ const cf = require('@mapbox/cloudfriend');
  * @param {String} opts.email
  * @param {String|Object} opts.cluster
  * @param {String|Object} opts.service
+ * @param {String|Object} opts.loadbalancer
  */
 function main(opts = {}) {
     if (!opts.prefix) opts.prefix = '';
@@ -17,7 +18,7 @@ function main(opts = {}) {
     Resources[`${opts.prefix}AlarmTopic`] = {
         Type: 'AWS::SNS::Topic',
         Properties: {
-            TopicName: cf.stackName,
+            TopicName: cf.join('-', [cf.stackName, 'topic']),
             Subscription: [{
                 Endpoint: opts.email,
                 Protocol: 'email'
@@ -69,6 +70,26 @@ function main(opts = {}) {
                 Value: opts.service
             }]
         }
+    };
+
+    Resources[`${opts.prefix}AlarmHTTPCodeELB5XX`] = {
+        Type: 'AWS::CloudWatch::Alarm',
+        Properties: {
+            AlarmName: cf.join('-', [cf.stackName, 'AlarmHTTPCodeELB5XX', cf.region]),
+            MetricName: 'HTTPCode_ELB_5XX_Count',
+            Namespace: 'AWS/ApplicationELB',
+            Statistic: 'Sum',
+            Period: 60,
+            EvaluationPeriods: 2,
+            Threshold: 1,
+            AlarmActions: [cf.ref(`${opts.prefix}AlarmTopic`)],
+            Dimensions: [{
+                Name: 'LoadBalancer',
+                Value: opts.loadbalancer
+            }],
+                TreatMissingData: 'notBreaching',
+                ComparisonOperator: 'GreaterThanThreshold'
+            }
     };
 
     return { Resources };
