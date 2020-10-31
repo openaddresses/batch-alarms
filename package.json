@@ -1,22 +1,22 @@
 {
-  "name": "batch-alarms",
-  "version": "1.0.0",
-  "description": " Library for providing default CloudFormation dashboards & ECS Services ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/openaddresses/batch-alarms.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/openaddresses/batch-alarms/issues"
-  },
-  "homepage": "https://github.com/openaddresses/batch-alarms#readme",
-  "dependencies": {
-    "@mapbox/cloudfriend": "^4.4.0"
-  }
+    "name": "batch-alarms",
+    "version": "1.0.0",
+    "description": " Library for providing default CloudFormation dashboards & ECS Services ",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/openaddresses/batch-alarms.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/openaddresses/batch-alarms/issues"
+    },
+    "homepage": "https://github.com/openaddresses/batch-alarms#readme",
+    "dependencies": {
+        "@mapbox/cloudfriend": "^4.4.0"
+    }
 }
