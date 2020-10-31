@@ -87,9 +87,68 @@ function main(opts = {}) {
                 Name: 'LoadBalancer',
                 Value: opts.loadbalancer
             }],
-                TreatMissingData: 'notBreaching',
-                ComparisonOperator: 'GreaterThanThreshold'
-            }
+            TreatMissingData: 'notBreaching',
+            ComparisonOperator: 'GreaterThanThreshold'
+        }
+    };
+
+    Resources[`${opts.prefix}AlarmHTTPCodeBackend5XX`] = {
+        Type: 'AWS::CloudWatch::Alarm',
+        Properties: {
+            AlarmName: cf.join('-', [cf.stackName, 'AlarmHTTPCodeBackend5XX', cf.region]),
+            MetricName: 'HTTPCode_Target_5XX_Count',
+            Namespace: 'AWS/ApplicationELB',
+            Statistic: 'Sum',
+            Period: 60,
+            EvaluationPeriods: 2,
+            Threshold: 1,
+            AlarmActions: [cf.ref(`${opts.prefix}AlarmTopic`)],
+            Dimensions: [{
+                Name: 'LoadBalancer',
+                Value: opts.loadbalancer
+            }],
+            TreatMissingData: 'notBreaching',
+            ComparisonOperator: 'GreaterThanThreshold'
+        }
+    };
+
+    Resources[`${opts.prefix}AlarmHTTPCodeBackend5XXDuration`] = {
+        Type: 'AWS::CloudWatch::Alarm',
+        Properties: {
+            AlarmName: cf.join('-', [cf.stackName, 'AlarmHTTPCodeBackend5XXDuration', cf.region]),
+            MetricName: 'HTTPCode_Target_5XX_Count',
+            Namespace: 'AWS/ApplicationELB',
+            Statistic: 'Sum',
+            Period: 60 * 5,
+            EvaluationPeriods: 20 / 5,
+            Threshold: 5,
+            AlarmActions: [cf.ref(`${opts.prefix}AlarmTopic`)],
+            Dimensions: [{
+                Name: 'LoadBalancer',
+                Value: opts.loadbalancer
+            }],
+            TreatMissingData: 'notBreaching',
+            ComparisonOperator: 'GreaterThanThreshold'
+        }
+    };
+
+    Resources[`${opts.prefix}AlarmP99Latency`] = {
+        Type: 'AWS::CloudWatch::Alarm',
+        Properties: {
+            AlarmName: cf.join('-', [cf.stackName, 'AlarmP99Latency', cf.region]),
+            MetricName: 'TargetResponseTime',
+            Namespace: 'AWS/ApplicationELB',
+            ExtendedStatistic: 'p99',
+            Period: '60',
+            EvaluationPeriods: '5',
+            Threshold: '10',
+            AlarmActions: [cf.ref(`${opts.prefix}AlarmTopic`)],
+            Dimensions: [{
+                Name: 'LoadBalancer',
+                Value: opts.loadbalancer
+            }],
+            ComparisonOperator: 'GreaterThanThreshold'
+        }
     };
 
     return { Resources };
