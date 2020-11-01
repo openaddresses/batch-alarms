@@ -1,6 +1,7 @@
 'use strict';
 
 const cf = require('@mapbox/cloudfriend');
+const dashboard = require('./lib/dashboard');
 
 /**
  * Provide CloudFormation Based Metrics, Alarms, & Dashboards
@@ -10,6 +11,7 @@ const cf = require('@mapbox/cloudfriend');
  * @param {String} opts.email Email to submit alarms to
  * @param {String|Object} opts.cluster ARN or CF Ref/Att of ECS Cluster
  * @param {String|Object} opts.service ARN or CF Ref/Att of ECS Service
+ * @param {String|Object} opts.targetgroup ARN or CF REf/Att of Target Group
  * @param {String|Object} opts.loadbalancer ARN or CF Ref/ATT of ELB
  *
  * @returns {Object} CloudFormation Fragment with alarm Resources
@@ -154,6 +156,19 @@ function main(opts = {}) {
             ComparisonOperator: 'GreaterThanThreshold'
         }
     };
+
+    Resources[`${opts.prefix}Dashboard`] = {
+        Type: 'AWS::CloudWatch::Dashboard',
+        Properties: {
+            DashboardName: cf.sub('${AWS::StackName}-${AWS::Region}'),
+            DashboardBody: cf.sub(JSON.stringify(dashboard), {
+                LoadBalancerFullName: opts.loadbalancer,
+                TargetGroupFullName: opts.targetgroup,
+                ServiceName: opts.service,
+                Cluster: opts.cluster
+            })
+        }
+    }
 
     return { Resources };
 }
