@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v1.1.0
+
+- :tada: Add CF Dashboard
+
 ### v1.0.0
 
 - :tada: Intial Release
