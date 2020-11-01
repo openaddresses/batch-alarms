@@ -4,11 +4,11 @@ const cf = require('@mapbox/cloudfriend');
  * Provide CloudFormation Based Metrics, Alarms, & Dashboards
  *
  * @param {Object} opts options object
- * @param {String} opts.prefix
- * @param {String} opts.email
- * @param {String|Object} opts.cluster
- * @param {String|Object} opts.service
- * @param {String|Object} opts.loadbalancer
+ * @param {String} opts.prefix Cloudformation Prefix
+ * @param {String} opts.email Email to submit alarms to
+ * @param {String|Object} opts.cluster ARN or CF Ref/Att of ECS Cluster
+ * @param {String|Object} opts.service ARN or CF Ref/Att of ECS Service
+ * @param {String|Object} opts.loadbalancer ARN or CF Ref/ATT of ELB
  */
 function main(opts = {}) {
     if (!opts.prefix) opts.prefix = '';
