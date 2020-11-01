@@ -4,7 +4,8 @@
     "description": " Library for providing default CloudFormation dashboards & ECS Services ",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint index.js lib/**.js"
     },
     "repository": {
         "type": "git",
@@ -18,5 +19,9 @@
     "homepage": "https://github.com/openaddresses/batch-alarms#readme",
     "dependencies": {
         "@mapbox/cloudfriend": "^4.4.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.12.1",
+        "eslint-plugin-node": "^11.1.0"
     }
 }
