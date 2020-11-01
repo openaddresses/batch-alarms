@@ -1,3 +1,5 @@
+'use strict';
+
 const cf = require('@mapbox/cloudfriend');
 
 /**
@@ -9,6 +11,8 @@ const cf = require('@mapbox/cloudfriend');
  * @param {String|Object} opts.cluster ARN or CF Ref/Att of ECS Cluster
  * @param {String|Object} opts.service ARN or CF Ref/Att of ECS Service
  * @param {String|Object} opts.loadbalancer ARN or CF Ref/ATT of ELB
+ *
+ * @returns {Object} CloudFormation Fragment with alarm Resources
  */
 function main(opts = {}) {
     if (!opts.prefix) opts.prefix = '';
@@ -47,7 +51,7 @@ function main(opts = {}) {
                 Value: opts.service
             }]
         }
-    }
+    };
 
     Resources[`${opts.prefix}CpuAlarm`] = {
         Type: 'AWS::CloudWatch::Alarm',
