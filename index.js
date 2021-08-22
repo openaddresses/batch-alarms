@@ -168,7 +168,7 @@ function main(opts = {}) {
                 Cluster: opts.cluster
             })
         }
-    }
+    };
 
     return { Resources };
 }

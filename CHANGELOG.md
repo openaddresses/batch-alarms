@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v1.1.1
+
+- :arrow_up: General Dep Update
+
 ### v1.1.0
 
 - :tada: Add CF Dashboard
