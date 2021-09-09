@@ -9,6 +9,7 @@ const dashboard = require('./lib/dashboard');
  * @param {Object} opts options object
  * @param {String} opts.prefix Cloudformation Prefix
  * @param {String} opts.email Email to submit alarms to
+ * @param {String|Object} opts.apache Apache formatted log group
  * @param {String|Object} opts.cluster ARN or CF Ref/Att of ECS Cluster
  * @param {String|Object} opts.service ARN or CF Ref/Att of ECS Service
  * @param {String|Object} opts.targetgroup ARN or CF REf/Att of Target Group
@@ -164,6 +165,7 @@ function main(opts = {}) {
             DashboardBody: cf.sub(JSON.stringify(dashboard), {
                 LoadBalancerFullName: opts.loadbalancer,
                 TargetGroupFullName: opts.targetgroup,
+                Apache: opts.apache,
                 ServiceName: opts.service,
                 Cluster: opts.cluster
             })
