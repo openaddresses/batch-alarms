@@ -18,6 +18,7 @@ cf.merge(
     template,
     alarms({
         prefix: 'CFPrefix',
+        apache: cf.stackName,
         email: 'nick@ingalls.ca',
         cluster: cf.ref('APIECSCluster'),
         service: cf.getAtt('APIService', 'Name'),
