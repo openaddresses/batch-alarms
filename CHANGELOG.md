@@ -10,6 +10,14 @@
 
 ## Version History
 
+### v2.0.1
+
+- :arrow_up: Update ESLint base deps
+
+### v2.0.0
+
+- :tada: Add support for 5xx Log Parsing
+
 ### v1.1.1
 
 - :arrow_up: General Dep Update
