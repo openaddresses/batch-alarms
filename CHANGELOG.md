@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.0.2
+
+- :arrow_up: Update ESLint base deps
+
 ### v2.0.1
 
 - :arrow_up: Update ESLint base deps
