@@ -10,6 +10,11 @@
 
 ## Version History
 
+### v2.1.0
+
+- :rocket: Add `@logStream` to 5xx Errors
+- :tada: Add node error log
+
 ### v2.0.4
 
 - :arrow_up: Update ESLint base deps
