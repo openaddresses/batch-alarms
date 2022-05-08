@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.1.1
+
+- :arrow_up: Update base deps
+
 ### v2.1.0
 
 - :rocket: Add `@logStream` to 5xx Errors
