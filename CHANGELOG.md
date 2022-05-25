@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.1.3
+
+- :arrow_up: Update base deps
+
 ### v2.1.2
 
 - :rocket: Automate npm releases
