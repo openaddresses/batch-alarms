@@ -1,7 +1,5 @@
-'use strict';
-
-const cf = require('@mapbox/cloudfriend');
-const dashboard = require('./lib/dashboard');
+import cf from '@mapbox/cloudfriend';
+import dashboard from './lib/dashboard.js';
 
 /**
  * Provide CloudFormation Based Metrics, Alarms, & Dashboards
@@ -17,7 +15,7 @@ const dashboard = require('./lib/dashboard');
  *
  * @returns {Object} CloudFormation Fragment with alarm Resources
  */
-function main(opts = {}) {
+export default function main(opts = {}) {
     if (!opts.prefix) opts.prefix = '';
 
     const Resources = {};
@@ -174,5 +172,3 @@ function main(opts = {}) {
 
     return { Resources };
 }
-
-module.exports = main;

@@ -11,8 +11,8 @@ npm add batch-alarms
 ## Usage
 
 ```js
-const cf = require('@mapbox/cloudfriend');
-const alarms = require('batch-alarms');
+import cf from '@mapbox/cloudfriend';
+import alarms from 'batch-alarms';
 
 cf.merge(
     template,
