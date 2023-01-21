@@ -10,6 +10,11 @@
 
 ## Version History
 
+### v3.0.0
+
+- :tada: Update to ES Module
+- :arrow_up: Update base deps
+
 ### v2.1.4
 
 - :arrow_up: Update base deps
