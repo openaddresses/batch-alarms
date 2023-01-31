@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v3.1.0
+
+- :rocket: Add initial RDS Support
+
 ### v3.0.0
 
 - :tada: Update to ES Module
