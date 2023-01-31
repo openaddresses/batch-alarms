@@ -12,11 +12,14 @@ npm add batch-alarms
 
 ```js
 import cf from '@mapbox/cloudfriend';
-import alarms from 'batch-alarms';
+import {
+    ELB as ELBAlarms,
+    RDS as RSDAlarms
+} from 'batch-alarms';
 
 cf.merge(
     template,
-    alarms({
+    ELBAlarms({
         prefix: 'CFPrefix',
         apache: cf.stackName,
         email: 'nick@ingalls.ca',
@@ -24,6 +27,11 @@ cf.merge(
         service: cf.getAtt('APIService', 'Name'),
         loadbalancer: cf.getAtt('APIELB', 'LoadBalancerFullName'),
         targetgroup: cf.getAtt('APITargetGroup', 'TargetGroupFullName'),
+    }),
+    ELBAlarms({
+        prefix: 'CFPrefix',
+        email: 'nick@ingalls.ca',
+        targetgroup: cf.ref('RDSInstance')
     })
 );
 ```
