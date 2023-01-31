@@ -5,8 +5,10 @@
     "description": " Library for providing default CloudFormation dashboards & ECS Services ",
     "main": "index.js",
     "scripts": {
+        "doc": "documentation build index.js -f html -o docs && documentation lint index.js lib/*.js",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint index.js lib/**.js"
+        "lint": "eslint index.js lib/**.js",
+        "lint-doc": "documentation lint index.js lib/*.js"
     },
     "repository": {
         "type": "git",
