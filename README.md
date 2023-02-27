@@ -14,7 +14,7 @@ npm add batch-alarms
 ## Usage
 
 ```js
-import cf from '@mapbox/cloudfriend';
+import cf from '@openaddresses/cloudfriend';
 import {
     ELB as ELBAlarms,
     RDS as RSDAlarms
