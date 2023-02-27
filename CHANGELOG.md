@@ -10,7 +10,7 @@
 
 ## Version History
 
-### v3.1.0
+### v3.2.0
 
 - :rocket: Use `@openaddresses/cloudfriend` to use new AWS-SDK
 
