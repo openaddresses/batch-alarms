@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.0.0
+
+- :rocket: Use Prefix in names of resouces to allow two ELB instances to be used together
+
 ### v3.2.0
 
 - :rocket: Use `@openaddresses/cloudfriend` to use new AWS-SDK
