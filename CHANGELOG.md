@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.1.0
+
+- :rocket: Allow Custom Topic
+
 ### v4.0.0
 
 - :rocket: Use Prefix in names of resouces to allow two ELB instances to be used together
