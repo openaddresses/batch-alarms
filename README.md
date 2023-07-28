@@ -13,6 +13,8 @@ npm add batch-alarms
 
 ## Usage
 
+### Notifying an Email
+
 ```js
 import cf from '@openaddresses/cloudfriend';
 import {
@@ -34,6 +36,34 @@ cf.merge(
     ELBAlarms({
         prefix: 'CFPrefix',
         email: 'nick@ingalls.ca',
+        targetgroup: cf.ref('RDSInstance')
+    })
+);
+```
+
+### Notifying an Existing SNS Topic
+
+```js
+import cf from '@openaddresses/cloudfriend';
+import {
+    ELB as ELBAlarms,
+    RDS as RSDAlarms
+} from 'batch-alarms';
+
+cf.merge(
+    template,
+    ELBAlarms({
+        prefix: 'CFPrefix',
+        apache: cf.stackName,
+        topic: cf.ref('ExistingTopic'),
+        cluster: cf.ref('APIECSCluster'),
+        service: cf.getAtt('APIService', 'Name'),
+        loadbalancer: cf.getAtt('APIELB', 'LoadBalancerFullName'),
+        targetgroup: cf.getAtt('APITargetGroup', 'TargetGroupFullName'),
+    }),
+    ELBAlarms({
+        prefix: 'CFPrefix',
+        topic: cf.ref('ExistingTopic'),
         targetgroup: cf.ref('RDSInstance')
     })
 );
