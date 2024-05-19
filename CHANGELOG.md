@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.2.0
+
+- :rocket: Improve readability of Dashboard Name
+
 ### v4.1.0
 
 - :rocket: Allow Custom Topic
