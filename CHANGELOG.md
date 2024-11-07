@@ -10,6 +10,11 @@
 
 ## Version History
 
+### v4.3.0
+
+- :bug: An invalid Topic was generated if an email and topic were not provided
+- :rocket: Make Cluster and Service optional
+
 ### v4.2.0
 
 - :rocket: Improve readability of Dashboard Name
