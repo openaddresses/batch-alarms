@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.3.1
+
+- :bug: Fix empty topic array
+
 ### v4.3.0
 
 - :bug: An invalid Topic was generated if an email and topic were not provided
