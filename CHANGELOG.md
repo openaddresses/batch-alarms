@@ -10,6 +10,11 @@
 
 ## Version History
 
+### v4.4.0
+
+- :rocket: Ensure all 5xx error codes are surfaced
+- :rocket: Update to new morgan syntax
+
 ### v4.3.1
 
 - :bug: Fix empty topic array
