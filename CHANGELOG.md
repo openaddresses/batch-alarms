@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.4.1
+
+- :bug: Fix Log name encoding
+
 ### v4.4.0
 
 - :rocket: Ensure all 5xx error codes are surfaced
