@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.4.3
+
+- :bug: Remove Hardcoded Regions
+
 ### v4.4.2
 
 - :bug: Use internal AWS Vars
