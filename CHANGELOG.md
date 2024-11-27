@@ -10,6 +10,11 @@
 
 ## Version History
 
+### v4.4.2
+
+- :bug: Use internal AWS Vars
+- :arrow_up: Update to latest ESLint Config
+
 ### v4.4.1
 
 - :bug: Fix Log name encoding
