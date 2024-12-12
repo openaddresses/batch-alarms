@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.5.0
+
+- :tada: Allow dashboards to be created for non-ECS deployed ELBs
+
 ### v4.4.3
 
 - :bug: Remove Hardcoded Regions
