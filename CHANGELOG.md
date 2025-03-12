@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.5.1
+
+- :bug: Fix bug in email notifications
+
 ### v4.5.0
 
 - :tada: Allow dashboards to be created for non-ECS deployed ELBs
