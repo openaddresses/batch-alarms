@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.5.2
+
+- :arrow_up: Update Core Deps
+
 ### v4.5.1
 
 - :bug: Fix bug in email notifications
