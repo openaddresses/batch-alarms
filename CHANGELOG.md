@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.7.1
+
+- :bug: Remove filter syntax
+
 ### v4.7.0
 
 - :tada: Add `@start` and `@end` filtering to log widgets
