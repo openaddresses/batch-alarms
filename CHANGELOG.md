@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.7.2
+
+- :bug: Add escaping for multiline query
+
 ### v4.7.1
 
 - :bug: Remove filter syntax
