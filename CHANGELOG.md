@@ -10,6 +10,11 @@
 
 ## Version History
 
+### v4.6.0
+
+- :rocket: CloudWatch now requires `@log` to generate link to logGroup
+- :arrow_up: Update Core Deps
+
 ### v4.5.2
 
 - :arrow_up: Update Core Deps
