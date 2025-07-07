@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.7.0
+
+- :tada: Add `@start` and `@end` filtering to log widgets
+
 ### v4.6.0
 
 - :rocket: CloudWatch now requires `@log` to generate link to logGroup
