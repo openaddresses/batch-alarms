@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.7.4
+
+- :bug: Fix dangling " in log widget query
+
 ### v4.7.3
 
 - :bug: Fix dangling comma in log widget query
