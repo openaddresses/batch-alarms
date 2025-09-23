@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.8.0
+
+- :tada: Support RDS Clusers
+
 ### v4.7.4
 
 - :bug: Fix dangling " in log widget query
