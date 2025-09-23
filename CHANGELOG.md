@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.9.2
+
+- :bug: Fix ESlint syntax
+
 ### v4.9.1
 
 - :bug: Fix Cluster Generation
