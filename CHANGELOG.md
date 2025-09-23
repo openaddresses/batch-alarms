@@ -10,7 +10,7 @@
 
 ## Version History
 
-### v4.8.0
+### v4.9.0
 
 - :tada: Support RDS Clusers
 
