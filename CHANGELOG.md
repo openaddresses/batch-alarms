@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v4.9.1
+
+- :bug: Fix Cluster Generation
+
 ### v4.9.0
 
 - :tada: Support RDS Clusers
