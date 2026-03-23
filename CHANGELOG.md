@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v5.0.0
+
+- :tada: Migrate to Typescript
+
 ### v4.9.2
 
 - :bug: Fix ESlint syntax

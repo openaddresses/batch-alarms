@@ -3,12 +3,22 @@
     "type": "module",
     "version": "4.9.2",
     "description": " Library for providing default CloudFormation dashboards & ECS Services ",
-    "main": "index.js",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist/"
+    ],
     "scripts": {
-        "doc": "documentation build index.js -f html -o docs && documentation lint index.js lib/*.js",
+        "build": "tsc",
+        "doc": "typedoc",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint index.js lib/*.js",
-        "lint-doc": "documentation lint index.js lib/*.js"
+        "lint": "eslint src/**/*.ts"
     },
     "repository": {
         "type": "git",
@@ -21,11 +31,14 @@
     },
     "homepage": "https://github.com/openaddresses/batch-alarms#readme",
     "dependencies": {
-        "@openaddresses/cloudfriend": "^7.0.0",
-        "documentation": "^14.0.1"
+        "@openaddresses/cloudfriend": "^7.0.0"
     },
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^8.57.2",
+        "@typescript-eslint/parser": "^8.57.2",
         "eslint": "^9.0.1",
-        "eslint-plugin-n": "^17.14.0"
+        "eslint-plugin-n": "^17.14.0",
+        "typedoc": "^0.28.18",
+        "typescript": "^5.9.3"
     }
 }
