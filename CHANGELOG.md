@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v5.0.1
+
+- :rocket: Include Config Files
+
 ### v5.0.0
 
 - :tada: Migrate to Typescript
