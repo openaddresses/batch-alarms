@@ -31,12 +31,13 @@
     },
     "homepage": "https://github.com/openaddresses/batch-alarms#readme",
     "dependencies": {
+        "@eslint/js": "^10.0.1",
         "@openaddresses/cloudfriend": "^7.0.0"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^8.57.2",
         "@typescript-eslint/parser": "^8.57.2",
-        "eslint": "^9.0.1",
+        "eslint": "^10.0.0",
         "eslint-plugin-n": "^17.14.0",
         "typedoc": "^0.28.18",
         "typescript": "^5.9.3"

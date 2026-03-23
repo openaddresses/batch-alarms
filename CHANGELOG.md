@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v5.0.3
+
+- :rocket: Add NPM Ignore
+
 ### v5.0.2
 
 - :rocket: Update GH Actions release
