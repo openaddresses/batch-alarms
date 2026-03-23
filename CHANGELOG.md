@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v5.0.4
+
+- :bug: Include index.ts
+
 ### v5.0.3
 
 - :rocket: Add NPM Ignore
