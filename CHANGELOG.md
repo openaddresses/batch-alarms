@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v5.0.2
+
+- :rocket: Update GH Actions release
+
 ### v5.0.1
 
 - :rocket: Include Config Files
