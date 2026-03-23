@@ -1,7 +1,7 @@
 {
     "name": "@openaddresses/batch-alarms",
     "type": "module",
-    "version": "5.0.1",
+    "version": "5.0.2",
     "description": " Library for providing default CloudFormation dashboards & ECS Services ",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
