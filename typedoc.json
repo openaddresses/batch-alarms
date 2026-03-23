@@ -1,0 +1,12 @@
+{
+    "entryPoints": ["src/index.ts"],
+    "out": "docs",
+    "cleanOutputDir": true,
+    "tsconfig": "./tsconfig.json",
+    "readme": "README.md",
+    "name": "@openaddresses/batch-alarms",
+    "includeVersion": true,
+    "navigationLinks": {
+        "GitHub": "https://github.com/openaddresses/batch-alarms"
+    }
+}
